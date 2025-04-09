@@ -1,2 +1,18 @@
-Zero to Hero: Z2H
-A simple video game based on Python. With unlimited evolution potential! Currently, this is a 2D top-down game that implements functions such as movement and shooting. Implemented functions: 1. Omnidirectional movement 2. K key for regular firing 3. L key for double firing speed.
+# Z2H: Zero to Hero
+
+这是一个基于Pygame的2D游戏，玩家在游戏中控制一个角色，射击子弹，管理电池库存，并与环境中的物体进行交互。
+
+## 功能特性
+
+- **玩家移动和射击**：使用键盘（WASD或方向键）移动，鼠标左键射击。
+- **能量管理**：射击和特殊动作消耗能量，能量随时间恢复。
+- **电池管理**：收集电池并通过菜单与电池存储交互，进行存取操作。
+- **游戏场景**：包含起始大厅和主关卡，玩家可通过与门交互进入主关卡。
+- **HUD显示**：屏幕上显示玩家的电池库存、生命值、护甲和能量。
+
+## 安装指南
+
+1. 确保安装了Python 3.x（推荐版本）。
+2. 安装Pygame：
+   ```bash
+   pip install pygame
