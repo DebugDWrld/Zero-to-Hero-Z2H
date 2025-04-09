@@ -1,30 +1,19 @@
-global PLAYER_X, PLAYER_Y, MOVE_SPEED, PLAYER_DIRECTION, LAST_DIRECTION, PLAYER_ANGLE
-global BULLETS, BULLET_SPEED, BULLET_LIFETIME, SHOOT_COOLDOWN, LAST_SHOT_TIME
+# constants.py
 
-# Player's
+# global constants
 PLAYER_X = 400.0
 PLAYER_Y = 300.0
-MOVE_SPEED = 7.0
-PLAYER_DIRECTION = [0.0, 0.0]
-LAST_DIRECTION = [0.0, 0.0]
-PLAYER_ANGLE = 0.0
+MOVE_SPEED = 7.0  # make sure defines MOVE_SPEED there
+BULLET_SPEED = 9.5 # bullet speed (pixels/s)
+BULLET_LIFETIME = 3000 # bullet lifetime (ms)
+SHOOT_COOLDOWN = 250  # shoot cooldown (ms)
+F_KEY_COOLDOWN = 15000  # F key cooldown (ms)
+ENERGY_RECOVERY_RATE = 2  # energy recovery rate (energy/s)
+GAME_OVER_DELAY = 1500  # game over delay (ms)
+HALL_WIDTH = None
+HALL_HEIGHT = None
 
-# Bullet's:
-BULLETS = []
-BULLET_SPEED = 4.5
-BULLET_SPEED_FAST = BULLET_SPEED * 2
-BULLET_LIFETIME = 3000
-SHOOT_COOLDOWN = 200
-LAST_SHOT_TIME = 0
-
-player_x = PLAYER_X
-player_y = PLAYER_Y
-move_speed = MOVE_SPEED
-player_direction = PLAYER_DIRECTION
-last_direction = LAST_DIRECTION
-player_angle = PLAYER_ANGLE
-bullets = BULLETS
-bullet_speed = BULLET_SPEED
-bullet_lifetime = BULLET_LIFETIME
-shoot_cooldown = SHOOT_COOLDOWN
-last_shot_time = LAST_SHOT_TIME
+# global variables
+BULLETS = [] # list of bullets
+LAST_SHOT_TIME = 0 # last time bullet was shot
+LAST_F_KEY_TIME = 0 # last time F key was pressed
