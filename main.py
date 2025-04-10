@@ -40,7 +40,7 @@ while running:
         if event.type == pygame.QUIT or (event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE):
             running = False
         if battery_menu.handle_event(event, player, start_hall):
-            continue  # 菜单处理了事件，跳过后续逻辑
+            continue
 
         # handle battery menu interaction
         if event.type == pygame.KEYDOWN and event.key == pygame.K_e:
