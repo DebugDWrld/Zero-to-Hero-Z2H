@@ -69,12 +69,12 @@ class Player:
         space_left = self.battery_capacity - self.battery_inventory
         added = min(amount, space_left)
         self.battery_inventory += added
-        return added  # 返回实际添加的数量
+        return added  # Returns the actual amount of  batterires added
     # remove batteries
     def remove_batteries(self, amount):
         removed = min(amount, self.battery_inventory)
         self.battery_inventory -= removed
-        return removed  # 返回实际移除的数量
+        return removed  # Returns the actual amount of  batterires removed
     
     # take damage
     def take_damage(self, amount):
