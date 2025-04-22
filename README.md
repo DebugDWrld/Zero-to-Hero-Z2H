@@ -75,7 +75,6 @@ Control your character, shoot enemies, and with the help of your movement and sk
 2. Installing Pygame (In fact, this step is **not necessary**, because the setup.py in the project will detect and install the dependent environment **when running main.py.**)：
    ```bash
    pip install pygame
-   ```
    
 ## Instructions
 - **Start the game**：
