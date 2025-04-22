@@ -70,11 +70,12 @@ Watch our demo video: [Demo Video](https://youtu.be/51rQEeuwW5M)
 ## Features
 
 - **Player Controls**：Use the keyboard (WASD or arrow keys) to move, the mouse to control the attack direction, and click the left button to shoot.
+- **Unleash skills**: Use skills to fight against groups of enemies or to deal with powerful bosses. Shuttle flash? Invincible frame? As long as you dare to operate, nothing is impossible
 - **Energy Management**：Shooting and using skills consumes energy, which regenerates over time.
 - **Battery Management**：Collect batteries in the main level and bring them back to the starting lobby to store them in the battery warehouse.
 - **Game scene**：Contains the start hall and the main level, which players can enter by interacting with the portal.
 - **HUD Display**：The screen displays the player's inventory of batteries, health, armor, and energy in their backpack.
-
+- **Roguelike gameplay**: Make your character stronger through adventure, acquire cooler and higher-damage skills, and experience the thrill of collecting and growing.
 ## Installation Guide
 
 1. Make sure you have Python 3.x installed (recommended version).
