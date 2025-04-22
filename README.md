@@ -32,8 +32,8 @@ Watch our demo video: [Demo Video](https://youtu.be/51rQEeuwW5M)
   3. Version Control：Git、GitHub.
   
 ### **Members (Roles & Responsibilities & Portion)**
-- **P2321054, Jimmy, LIU JIA**: 40%, Responsible for **promoting projects**, **game design**, **core code writing**, **fixing bugs**, **writing README.md files**, etc.
-- **P2321035, Maple, SUN YUEFENG**: 30%, Responsible for **core code writing**, **bug fixing**, **recording and editing video demo files**, etc.
+- **P2321054, Jimmy, LIU JIA**: 35%, Responsible for **promoting projects**, **game design**, **core code writing**, **fixing bugs**, **writing README.md files**, etc.
+- **P2321035, Maple, SUN YUEFENG**: 35%, Responsible for **core code writing**, **bug fixing**, **recording and editing video demo files**, etc.
 - **P2321310, LI YI LE**: 10%, Responsible for **checking and sorting out obvious syntax errors in the code**
 - **P2320311, WEN YAOXUAN**: 10%, Responsible for **finding inspiration from open source pigeon games**
 - **P2320712, PAN ZIXIANG**: 10%, Responsible for **testing the game** and **reporting bugs**
