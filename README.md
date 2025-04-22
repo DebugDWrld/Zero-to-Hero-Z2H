@@ -1,41 +1,59 @@
 # Z2H: Zero to Hero
 
-这是一个基于Pygame的2D游戏，玩家在游戏中控制一个角色，射击子弹，管理电池库存，并与环境中的物体进行交互。
+This is a 2D shooting game built on Python and Pygame. 
+Control your character, shoot enemies, and with the help of your movement and skills, go through challenging levels and take back everything you get from the levels.
 
-## 功能特性
+## Features
 
-- **玩家移动和射击**：使用键盘（WASD或方向键）移动，鼠标左键射击。
-- **能量管理**：射击和特殊动作消耗能量，能量随时间恢复。
-- **电池管理**：收集电池并通过菜单与电池存储交互，进行存取操作。
-- **游戏场景**：包含起始大厅和主关卡，玩家可通过与门交互进入主关卡。
-- **HUD显示**：屏幕上显示玩家的电池库存、生命值、护甲和能量。
+- **Player Controls**：Use the keyboard (WASD or arrow keys) to move, the mouse to control the attack direction, and click the left button to shoot.
+- **Energy Management**：Shooting and using skills consumes energy, which regenerates over time.
+- **Battery Management**：Collect batteries in the main level and bring them back to the starting lobby to store them in the battery warehouse.
+- **Game scene**：Contains the start hall and the main level, which players can enter by interacting with the portal.
+- **HUD Display**：The screen displays the player's inventory of batteries, health, armor, and energy in their backpack.
 
-## 安装指南
+## Installation Guide
 
-1. 确保安装了Python 3.x（推荐版本）。
-2. 安装Pygame：
+1. Make sure you have Python 3.x installed (recommended version).
+2. Installing Pygame (In fact, this step is not necessary, because the setup.py in the project will detect and install the dependent environment when running main.py.)：
    ```bash
    pip install pygame
+   
+## Instructions
+- **Start the game**：
+1. Run the main.py file.
+2. Make sure the input method is US keyboard (ENG).
 
-## 使用说明
-- **开始游戏**：
-1. 运行main.py文件。
-2. 确保输入法为US keyboard。
+- **Player Controls**：
+1. Move the mouse to control the attack direction. 
+2. Click the left mouse button to attack and destroy.
+3. Use the W, A, S, D keys or the arrow keys to control the character's movement.
+4. Use the F key to release skills.
+5. Use the E key to interact with the battery warehouse/property tree/portal/door in the scene.
+6. Use the Escape (Esc) key to exit the game at any time.
 
-- **玩家操控**：
-1. 点击鼠标左键进行攻击和破坏。
-2. 使用W、A、S、D键操控角色移动。
-3. 使用F键释放技能。
-4. 使用E键进行交互。
-5. 使用Escape（Esc）键退出游戏。
+- **Screen Display**：
+1. The upper left corner shows the real-time battery count in the player's backpack.
+2. The upper right corner displays the player's real-time health, armor, and energy attributes, as well as the skill cooldown time.
 
-- **画面显示**：
-1. 左上角显示玩家背包内的实时电池数量。
-2. 右上角显示玩家实时的生命值、护甲值和能量属性。
+- **Game Mechanics**：
+1. When a player is damaged, the armor value is deducted first; when the armor value is 0, the health value is deducted.
+2. The player's attack, destruction and skill release will consume energy.
+3. Energy automatically regenerates over time.
+4. The player has a backpack feature, which is used to store batteries and other items obtained from the levels.
+5. Battery mechanism: Batteries can be obtained from within the level and used to delay the closing time of the portal.
 
-- **游戏机制**：
-1. 玩家受到伤害时，优先扣除护甲值；当护甲值为0时，扣除生命值。
-2. 玩家的攻击、破坏和释放技能均会消耗能量：攻击、破坏每次4点；释放技能每次16点。
-3. 能量会自动恢复，每秒恢复2点。
-4. 玩家拥有背包功能，用于存放从关卡中获得的电池，容量为64。
-5. 电池机制：电池可以从关卡内的宝箱中获得，用于延缓大门关闭时间。
+## Project Structure
+ZeroToHero/
+├── main.py           # Main game loop
+├── bullet.py        # Bullet mechanics
+├── player.py        # Player logic
+├── enemy.py         # Enemy logic
+├── starthall.py     # Starthall scene
+├── docs/            # Documentation and screenshots
+├── constants.py     # Constants used
+├── initial.py       # Initialize the game 
+├── load.py          # Load game textures and other resources
+├── render.py        # Render various prompts and hud in the game
+├── setup.py         # Detect and install environment dependencies
+├── menu.py          # UI menu related logic
+└── README.md        # This file
