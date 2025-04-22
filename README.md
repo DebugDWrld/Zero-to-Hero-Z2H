@@ -72,9 +72,10 @@ Control your character, shoot enemies, and with the help of your movement and sk
 ## Installation Guide
 
 1. Make sure you have Python 3.x installed (recommended version).
-2. Installing Pygame (In fact, this step is not necessary, because the setup.py in the project will detect and install the dependent environment when running main.py.)：
+2. Installing Pygame (In fact, this step is **not necessary**, because the setup.py in the project will detect and install the dependent environment **when running main.py.**)：
    ```bash
    pip install pygame
+   ```
    
 ## Instructions
 - **Start the game**：
@@ -115,6 +116,6 @@ ZeroToHero/
 ├── render.py        # Render various prompts and hud in the game
 ├── setup.py         # Detect and install environment dependencies
 ├── menu.py          # UI menu related logic
-└── Images           # Necessary game textures
+├── Images           # Necessary game textures
 └── README.md        # This file
 ```
