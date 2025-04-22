@@ -26,10 +26,10 @@ Control your character, shoot enemies, and with the help of your movement and sk
 - **Player Controls**：
 1. Move the mouse to control the attack direction. 
 2. Click the left mouse button to attack and destroy.
-3. Use the W, A, S, D keys or the arrow keys to control the character's movement.
-4. Use the F key to release skills.
-5. Use the E key to interact with the battery warehouse/property tree/portal/door in the scene.
-6. Use the Escape (Esc) key to exit the game at any time.
+3. Use the **W**, **A**, **S**, **D** keys or the **Arrow Keys** to control the character's movement.
+4. Use the **F** key to release skills.
+5. Use the **E** key to interact with the battery warehouse/property tree/portal/door in the scene.
+6. Use the **Escape (Esc)** key to exit the game at any time.
 
 - **Screen Display**：
 1. The upper left corner shows the real-time battery count in the player's backpack.
