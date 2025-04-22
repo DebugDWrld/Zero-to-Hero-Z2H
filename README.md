@@ -2,6 +2,9 @@
 This is a 2D shooting game built on Python and Pygame. 
 Control your character, shoot enemies, and with the help of your movement and skills, go through challenging levels and take back everything you get from the levels.
 
+## Video Demo
+Watch our demo video: [Demo Video](https://youtu.be/51rQEeuwW5M)
+
 ## Graphical Abstract
 
 ![Project Graphical Abstract](docs/project_abstract.png)
