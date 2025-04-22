@@ -108,7 +108,7 @@ ZeroToHero/
 ├── player.py        # Player logic
 ├── enemy.py         # Enemy logic
 ├── starthall.py     # Starthall scene
-├── docs/            # Documentation and screenshots
+├── docs/            # Documentation and graphical abstract screenshot 
 ├── constants.py     # Constants used
 ├── initial.py       # Initialize the game 
 ├── load.py          # Load game textures and other resources
