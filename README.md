@@ -43,6 +43,7 @@ Control your character, shoot enemies, and with the help of your movement and sk
 5. Battery mechanism: Batteries can be obtained from within the level and used to delay the closing time of the portal.
 
 ## Project Structure
+```
 ZeroToHero/
 ├── main.py           # Main game loop
 ├── bullet.py        # Bullet mechanics
@@ -57,3 +58,4 @@ ZeroToHero/
 ├── setup.py         # Detect and install environment dependencies
 ├── menu.py          # UI menu related logic
 └── README.md        # This file
+```
