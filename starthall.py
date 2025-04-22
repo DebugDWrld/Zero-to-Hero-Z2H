@@ -10,11 +10,12 @@ class StartHall:
         self.tile_size = tile_size
         self.width = screen_width // tile_size
         self.height = screen_height // tile_size
-        self.grid = [[1 for _ in range(self.width)] for _ in range(self.height)]  # 1 = wall, 0 = floor, 2 = gate, 3 = battery storage
+        self.grid = [[1 for _ in range(self.width)] for _ in range(self.height)]  # 1 = wall, 0 = floor, 2 = gate, 3 = battery storage, 4 = property tree
         self.gate_pos = (self.width // 2, self.height - 2)
         self.battery_pos = (self.width // 3, self.height // 2)  # location of the battery storage
-        self.battery_storage = 0  # current battery storage
-        self.battery_limit = 64  # up to 64 batteries
+        self.property_tree_pos = (self.width * 2 // 3, self.height // 2)  # location of the property tree
+        self.battery_storage = 10  # current battery storage
+        self.battery_limit = 128  # up to 128 batteries
         
         # create a hall
         for y in range(1, self.height - 1):
@@ -26,6 +27,9 @@ class StartHall:
 
         # set the battery storage position
         self.grid[self.battery_pos[1]][self.battery_pos[0]] = 3 # 3 = battery storage
+
+        # set the property tree position
+        self.grid[self.property_tree_pos[1]][self.property_tree_pos[0]] = 4 # 4 = property tree
 
     # Draw the hall
     def draw(self, win, images, camera_offset):
@@ -60,10 +64,17 @@ class StartHall:
 
                 # battery storage
                 elif self.grid[y][x] == 3:
-                    if "battery_storage" not in images:
-                        pygame.draw.rect(win, (0, 255, 0), (*pos, self.tile_size, self.tile_size))  # if the image is not found, draw a green rectangle instead
+                    if "battery_inventory" not in images:
+                        pygame.draw.rect(win, (128, 128, 128), (*pos, self.tile_size, self.tile_size))  # if the image is not found, draw a green rectangle instead
                     else:
-                        win.blit(images["battery_storage"], pos)
+                        win.blit(images["battery_inventory"], pos)
+
+                # property tree
+                elif self.grid[y][x] == 4:
+                    if "property_tree" not in images:
+                        pygame.draw.rect(win, (0, 255, 0), (*pos, self.tile_size, self.tile_size))
+                    else:
+                        win.blit(images["property_tree"], pos)
 
     # Check if the player is interacting with the gate
     def check_gate_interaction(self, player, keys):
@@ -84,6 +95,18 @@ class StartHall:
         # Check if the player is within a certain distance of the battery storage
         if (abs(player.world_x - battery_x) < self.tile_size * 1.5 and 
             abs(player.world_y - battery_y) < self.tile_size * 1.5 and 
+            keys[pygame.K_e]):
+            return True
+        return False
+
+    # Check if the player is interacting with the property tree
+    def check_property_tree_interaction(self, player, keys):
+        tree_x = self.property_tree_pos[0] * self.tile_size + self.tile_size // 2
+        tree_y = self.property_tree_pos[1] * self.tile_size + self.tile_size // 2
+
+        # Check if the player is within a certain distance of the property tree
+        if (abs(player.world_x - tree_x) < self.tile_size * 1.5 and 
+            abs(player.world_y - tree_y) < self.tile_size * 1.5 and 
             keys[pygame.K_e]):
             return True
         return False
