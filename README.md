@@ -57,5 +57,6 @@ ZeroToHero/
 ├── render.py        # Render various prompts and hud in the game
 ├── setup.py         # Detect and install environment dependencies
 ├── menu.py          # UI menu related logic
+└── Images           # Necessary game textures
 └── README.md        # This file
 ```
